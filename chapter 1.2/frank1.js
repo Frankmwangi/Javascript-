@@ -163,7 +163,7 @@ logBlogs: function(){
 };
 user.logBlogs();
 console.log(this);*/
-console.log(Math);
+/*console.log(Math);
 console.log(Math.PI);
 console.log(Math.E);
 const area= 7.7;
@@ -175,6 +175,16 @@ console.log(Math.trunc(area));
 //random numbers
 const random = Math.random();
 console.log(random);
-console.log(Math.round(random *100));
+console.log(Math.round(random *100));*/
+/*let scoreOne = 50;
+let scoreTwo =scoreOne;
+console.log(`scoreOne: ${scoreOne}`,`scoreOne: ${scoreTwo}`);
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`,`scoreOne: ${scoreTwo}`);*/
+/*const userOne = {name:'ryu',age:30};
+const userTwo = userOne;
+console.log(userOne,userTwo);
+userOne.age = 40;
+console.log(userOne,userTwo);*/
 
 
