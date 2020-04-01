@@ -186,5 +186,79 @@ const userTwo = userOne;
 console.log(userOne,userTwo);
 userOne.age = 40;
 console.log(userOne,userTwo);*/
+/*const para = document.querySelector('p');
+//para.innerText = 'ninjas are awesome';
+//console.log(para.innerText);
+//const paras = document.querySelectorAll('p');
+//paras.forEach(para => {
+  //  console.log(para.innerText);
+  //  para.innerText +='new text';
+//});
+const content = document.querySelector('.content');
+//console.log(content.innerHTML);
+//content.innerHTML += '<h2>THIS IS A NEW H2</h2>';
+const pepople = ['mario','luigi','yoshi'];
+pepople.forEach(person =>{
+   content.innerHTML += `<p>${person}</p>` ;
+});*/
+//const content = document.querySelector('p');
+//console.log(content.classList);
+//content.classList.add('error');
+//content.classList.remove('error');
+/*const content = document.querySelectorAll('p') ;
+ content.forEach(p =>{
+     if(p.textContent.includes('error')){
+         p.classList.add('error');
+     }
+ });
+ content.forEach(p =>{
+    if(p.textContent.includes('success')){
+        p.classList.add('success');
+    }
+});
+    const title =document.querySelector('title');
+    title.classList.toggle('test');*/
+/*const article = document.querySelector('article');
+console.log(article.children);
+Array.from(article.children).forEach(child =>{
+    child.classList.add('article-element');      
+});*/
+/*const title = document.querySelector('h2')
+console.log(title.parentElement);
+console.log(title.nextElementSibling);*/
+//const button = document.querySelector('button');
+//button.addEventListener('click',() =>{
+  //  console.log('you clicked me');
+//});
+/*const ul = document.querySelector('ul'); 
+const button =document.querySelector('button');
+button.addEventListener('click', () =>{
+    const li = document.createElement('li');
+    li.textContent = 'something new';
+    ul.append(li);
+});
+const items = document.querySelectorAll('ul ');
+items.forEach(item =>{
+    item.addEventListener('click',e =>{
+       console.log('event in LI');
+       e.stopPropagation();
+      e.target.remove();
+    });
+});
+ul.addEventListener('click', e => {
+    console.log ('event in UL');
+})*/
+const copy = document.querySelector('.copy-me');
+copy.addEventListener('copy', () => {
+    console.log('OI! my content is copyright');
+});
+const box = document.querySelector('.box');
 
-
+box.addEventListener('mousemove',e =>{
+    //console.log(e);
+   // console.log(e.offsetX,e.offsetY);
+   box.textContent =`x pos - ${e.offsetX} y pos -${e.offsetY}`;
+});
+document.addEventListener('wheel', e =>{
+ console.log(e);
+});
