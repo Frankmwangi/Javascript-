@@ -1,5 +1,5 @@
-const button = document.querySelector('button');
-const popup = document.querySelector('.popup-wrapper');
+//const button = document.querySelector('button');
+/*const popup = document.querySelector('.popup-wrapper');
 const close = document.querySelector('.popup-close');
 button.addEventListener('click',() =>{
 popup.style.display = 'block';
@@ -9,4 +9,41 @@ close.addEventListener('click',() =>{
     });
     popup.addEventListener('click',() =>{
         popup.style.display = 'none';
+        });*/
+        const form = document.querySelector('.signup-form');
+      //  const username = document.querySelector('#username');
+      const feedback = document.querySelector('.feedback');
+      const usernamePattern = /^[a-zA-z]{6,12}$/
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+          
+            const username = form.username.value;
+            const usernamePattern = /^[a-zA-z]{6,12}$/
+            if(usernamePattern.test(username)){
+                feedback.textContent = 'that username is valid!';
+            }else{
+                feedback.textContent = 'username must contain letters only & be between 6 & 12 characters long';
+            }
         });
+        form.username.addEventListener('keyup', e =>{
+            console.log(e);
+            if( usernamePattern.test(e.target.value)){
+                form.username.setAttribute('class','success')
+            }else{
+                form.username.setAttribute('class','error')
+            }
+        });
+       // const username= '@chorshaun';
+       // const pattern = /^[a-z]{6,}$/;
+       /* let result =pattern.test(username);
+        console.log(result);
+        if(result){
+            console.log('regex test passed ;)');
+        }else{
+            console.log('regex test failed');
+        }*/
+      // let result = username.search(pattern);
+       // console.log(result);
+
+        
