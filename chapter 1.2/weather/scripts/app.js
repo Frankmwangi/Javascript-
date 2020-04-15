@@ -42,12 +42,6 @@ if(card.classList.contains('d-none')){
 };
 //remove the d-none if present
 
-
-
-
-
-
-
 const updateCity = async(city) =>{
     const cityDets = await getCity(city);
     const weather = await getWeather(cityDets.Key);
@@ -57,11 +51,6 @@ return {
     };
 
 };
-
-
-
-
-
 cityForm.addEventListener('submit', e => {
     e.preventDefault();
     //get city value
@@ -71,4 +60,12 @@ cityForm.addEventListener('submit', e => {
 
     updateCity(city).then(data => updateUI(data))
     .catch(err => console.log(err));
+//set local storage
+
+    localStorage.setItem('city',city);
 });
+if(localStorage.getItem('city')){
+    updateCity(localStorage.getItem('city'))
+    .then(data=> updateUI(data))
+    .catch(err => console.log(err));
+}
